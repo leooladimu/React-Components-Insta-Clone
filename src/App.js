@@ -19,7 +19,7 @@ const App = () => {
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
 
   const likePost = postId => {
-    /*
+    /* 
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
       The state of the app lives at the top of the React tree, but it wouldn't be fair for nested components not to be able to change state!
       This function is passed down to nested components through props, allowing them to increase the number of likes of a given post.
@@ -31,7 +31,7 @@ const App = () => {
      */
   
         setPosts = posts.map = () => {
-          post.id === postId ? {...post} : post;
+          // post.id === postId ? setPosts.likes + 1 : post;
           return posts;
         }
   };
@@ -40,6 +40,7 @@ const App = () => {
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
     <SearchBar/>
+    {/* <input onChange={} /> */}
     <Posts posts={posts}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
